@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/83101c736f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Slash</title>
+</head>
+
+<body>
+    <section class="navbar">
+        <div class="nav-main">
+            <div class="navbar__left">
+                <h1 class="logo navbar-logo">
+                    <a href="#"><span>Slashdot</span></a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="stories">Stories</a></li>
+                        <li class="nav-label"><span class="highlight">Firehose</span>
+                            <i class="fas fa-angle-right"></i>
+                        </li>
+                        <li><a href="all">All</a></li>
+                        <li><a href="popular">Popular</a></li>
+                        <li><a href="polls">Polls</a></li>
+                        <li>
+                            <i>&sol;</i>
+                            <a href="deals">Deals</a></li>
+                        <li><div class="submit-article">Submit</div></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="navbar__right">
+                <div class="submit-article-mobile" href="submit"></div>
+                <form id="search-form" method="GET" action="/search">
+                    <div class="form-group">
+                        <input type="text" placeholder="Search">
+                        <button class="icon-search" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                class="ipc-icon ipc-icon--magnify" viewBox="0 0 24 24" fill="transparent"
+                                role="presentation">
+                                <path d="M0 0h24v24H0V0z"></path>
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                                    fill="white"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <button id="login">Login</button>
+                <span>or</span>
+                <button id="signup">Sign Up</button>
+            </div>
+        </div>
+        <div class="nav-second">
+            <div class="nav-mobile">
+                <a href="stories" class="selected-tab">Stories</a>
+                <a href="polls">Polls</a>
+                <a href="firehose">Firehose</a>
+            </div>
+            <ul>
+                <li class="highlight nav-label">Topics:</li>
+                <li><a href="devices">Devices</a></li>
+                <li><a href="build">Build</a></li>
+                <li><a href="entertainment">Entertainment</a></li>
+                <li><a href="technology">Technology</a></li>
+                <li><a href="opensource">Open Source</a></li>
+                <li><a href="science">Science</a></li>
+                <li><a href="yro">YRO</a></li>
+            </ul>
+            <div class="social-media">
+                <span class="highlight">Follow us:</span>
+                <a href="https://www.rss.com/slash" class="fa fa-rss"></a>
+                <a href="https://www.facebook.com/slash" class="fab fa-facebook-f"></a>
+                <a href="https://www.linkedin.com/slash" class="fab fa-linkedin-in"></a>
+                <a href="https://www.twitter.com/slash" class="fab fa-twitter"></a>
+                <a href="subscribe" class="fas fa-envelope"></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-wrapper">
+        <div class="user-tip">
+            <div class="pointer"></div>
+            Want to read Slash from your mobile device? Point it at <span class="highlight">m.slash.org</span> and
+            keep reading!
+        </div>
+
+        <div class="container-flex">
+            <main>
+                <div id="announcements">
+                    Check out Slashdot on Linkedin & Minds! | Migrate from GitHub to SourceForge quickly and easily with
+                    this tool. Check out all of SourceForge's improvements.
+                    <button class="btn-close" title="don't show me this again">×</button>
+                </div>
+
+                <div id="articles">
+                    <article>
+                        <header>
+                            <h3>Harvard CS50 Team: We 'Feel More Comfortable' About Harshly Punishing Cheaters
+                                <span class="highlight"></span>
+                            </h3>
+                            <div class="article__info">
+                                <div class="article__confirmed"><a href="/codered" class="fas fa-flask"></a></div>
+                                <div class="info-content">
+                                    <span>Posted by <b>BeauHD</b> on Thursday December 19, 2019 @05:00AM from the
+                                        reflection-time dept.</span>
+                                    <span class="topic-icon">
+                                        <a href="education">
+                                            <img src="images/education_64.png" alt="education" width="40" height="40">
+                                        </a>
+                                    </span>
+                                    <span class="comment-bubble">
+                                        <a href="#">4</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="article__info--mobile">
+                                <a href="/user25612"><b>BeauHD</b> 3 hours ago</a>
+                            </div>
+                        </header>
+
+                        <div class="article__content">
+                            <div class="subhead"><a href="#">theodp</a> writes:</div>
+
+                            <p class="alt">
+                                In <a
+                                    href="https://cs.harvard.edu/malan/publications/Teaching_Academic_Honesty_in_CS50.pdf">Teaching
+                                    Academic Honesty in CS50</a>, a new paper scheduled to be presented at SIGCSE 2020,
+                                educators behind Harvard's <a
+                                    href="https://news.slashdot.org/story/17/12/24/1837211/how-harvard-teaches-cs-students-how-to-code">fabled
+                                    CS50</a> introductory computer science course report on an unexpected benefit of the
+                                introduction of a "regret clause" that gives <a
+                                    href="https://news.slashdot.org/story/17/09/07/228213/following-cheating-scandals-harvard-dean-of-undergrad-ed-visits-cs50-class-and-tells-students-not-to-cheat">students
+                                    who cheat</a> 72 hours to self-report their misdeeds in return for a lesser
+                                punishment: It's made the CS50 team <a
+                                    href="https://www.thecrimson.com/article/2019/12/18/computer-science-50-report/">lose
+                                    less sleep over referring "unregretful" cheaters for harsh punishment</a>.
+                                <br><br>
+                                From the SIGCSE paper: "Invocations of that [regret] clause have led to heart-to-heart
+                                talks, referrals for mental health, and, ultimately, teachable moments for an otherwise
+                                not-previously-reached demographic. But that same clause has also contributed to an
+                                uptick in the number of cases referred to the university's honor council for
+                                disciplinary action [which may result in required withdrawal from the university], in
+                                part because we now feel more comfortable referring cases after students have had an
+                                opportunity to take ownership themselves but have chosen not to do so." Bet you didn't
+                                see that one coming, kids!
+                            </p>
+                            <br><br>
+                            <div class="article-footer">
+                                <div class="social-share">
+                                    <a href="https://www.facebook.com/slash?post=15367" class="fab fa-facebook-f"></a>
+                                    <a href="https://www.twitter.com/slash?post=91563" class="fab fa-twitter"></a>
+                                    <a href="https://www.linkedin.com/slash?post=15673" class="fab fa-linkedin-in"></a>
+                                    <a href="https://www.reddit.com/slash?post=92512" class="fab fa-reddit-alien"></a>
+                                </div>
+                                <div class="article-tags">
+                                    <a href="money">education</a>
+                                    <a href="china">cheating</a>
+                                    <a href="bitcoin">college</a>
+                                    <a href="my/login" class="fas fa-tag"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h3>Astronomers Find 19 More Galaxies Missing Their Dark Matter
+                                <a href="http://www.astronomy.com" class="highlight">(astronomy.com)</span>
+                            </h3>
+                            <div class="article__info">
+                                <div class="article__confirmed"><a href="/codered" class="fas fa-flask"></a></div>
+                                <div class="info-content">
+                                    <span>Posted by <b>BeauHD</b> on Wednesday December 11, 2019 @05:00AM from the
+                                        browser-streaming dept</span>
+                                    <span class="topic-icon">
+                                        <a href="astronomy">
+                                            <img src="images/space_64.png" alt="space" width="40" height="40">
+                                        </a>
+                                    </span>
+                                    <span class="comment-bubble">
+                                        <a href="#">9</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="article__content">
+                            <div class="subhead">An anonymouse reader quotes a report from the BBC:</div>
+                            <p class="alt">
+                                A leading research centre has called for new laws to restrict the use of
+                                emotion-detecting
+                                tech. The AI Now Institute says the field is "built on markedly shaky foundations."
+                                Despite
+                                this, systems are on sale to help vet job seekers, test criminal suspects for signs of
+                                deception, and set insurance prices. It wants such software to be banned from use in
+                                important decisions that affect people's lives and/or determine their access to
+                                opportunities. The <a href="#" class="highlight">US-based body has found support in the
+                                    UK</a> from the founder of a company
+                                developing its own emotional-response technologies -- but it cautioned that any
+                                restrictions
+                                would need to be nuanced enough not to hamper all work being done in the area.
+                                <br><br>
+                                AI Now refers to the technology by its formal name, affect recognition, in its annual
+                                report. It says the sector is undergoing a period of significant growth and could
+                                already be
+                                worth as much as $20 billion. "It claims to read, if you will, our inner-emotional
+                                states by
+                                interpreting the micro-expressions on our face, the tone of our voice or even the way
+                                that
+                                we walk," explained co-founder Prof Kate Crawford. "It's being used everywhere, from how
+                                do
+                                you hire the perfect employee through to assessing patient pain, through to tracking
+                                which
+                                students seem to be paying attention in class. "At the same time as <a href="#"
+                                    class="highlight">these technologies are
+                                    being rolled out</a>, large numbers of studies are showing that there is... no
+                                substantial
+                                evidence that people have this consistent relationship between the emotion that you are
+                                feeling and the way that your face looks."
+                            </p>
+                            <p>A Viasat spokesperson wouldn't comment on what prices and data caps will be applied to
+                                the company's FCC-subsidized plans. Viasat said it will provide the required 25Mbps
+                                service "along with an evolving usage allowance, and at FCC-defined prices, to certain
+                                areas, where we will be subject to a new range of federal and state regulations.</p>
+                            <br><br>
+                            <div class="article-footer">
+                                <div class="social-share">
+                                    <a href="https://www.facebook.com/slash?post=15367" class="fab fa-facebook-f"></a>
+                                    <a href="https://www.twitter.com/slash?post=91563" class="fab fa-twitter"></a>
+                                    <a href="https://www.linkedin.com/slash?post=15673" class="fab fa-linkedin-in"></a>
+                                    <a href="https://www.reddit.com/slash?post=92512" class="fab fa-reddit-alien"></a>
+                                </div>
+                                <div class="article-tags">
+                                    <a href="money">money</a>
+                                    <a href="china">china</a>
+                                    <a href="bitcoin">bitcoin</a>
+                                    <a href="my/login" class="fas fa-tag"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h3>Apple Pulls App That Let You Turn Your Phone Into a Virtual iPod With Click Wheel
+                                <a href="https://www.apple.com" class="highlight">(apple.com)</span></h3>
+                            <div class="article__info">
+                                <div class="article__confirmed"><a href="/codered" class="fas fa-flask"></a></div>
+                                <div class="info-content">
+                                    <span>Posted by BeauHD on Tuesday December 17, 2019 @05:00AM from the
+                                        fun-while-it-lasted dept</span>
+                                    <span class="topic-icon">
+                                        <a href="technology">
+                                            <img src="images/software_64.png" width="40" height="40"
+                                                alt="software technology">
+                                        </a>
+                                    </span>
+                                    <span class="comment-bubble">
+                                        <a href="#">8</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="article__content">
+                            <div class="subhead">Rewound, the basic music player app released last week that you could
+                                skin
+                                to make your iPhone look remarkably like an iPod Classic, has been pulled from the App
+                                Store, according to Rewound blog post published on Medium. The Verge reports:</div>
+                            <p class="alt">
+                                The blog says that Apple pulled the app because it copied the iPod's design, charged for
+                                Apple Music features, and people could mistake the app for an Apple product. The blog
+                                makes
+                                the case that the app had a pretty basic interface that looked nothing like an Apple
+                                app,
+                                and the iPod classic skins didn't come preinstalled. (You had to download them after you
+                                had
+                                already installed the app.) We've asked Apple for comment, and we'll update this story
+                                when
+                                we hear back.
+
+                                The Rewound blog says the iOS app can't be updated without "breaking the app for all
+                                170,000+ users," but the developer, Louis Anslow, says he will attempt to bring the app
+                                back
+                                in some way. On a GoFundMe page for continued development of Rewound, Anslow says he
+                                will
+                                "try some tweaks to get Rewound resubmitted" on the App Store and that the GoFundMe will
+                                help support development of a web app and an Android app.
+                            </p>
+                            <p>Microsoft said in a statement: "The ads within the app itself will be displayed
+                                regardless of which email address you use it with. It is not removable, but you can
+                                submit it as a suggestion within the Feedback Hub on Windows 10 here:
+                                <a href="https://msft.it/6012TVPXG">https://msft.it/6012TVPXG.</a>"</p>
+                            <br><br>
+                            <div class="article-footer">
+                                <div class="social-share">
+                                    <a href="https://www.facebook.com/slash?post=15367" class="fab fa-facebook-f"></a>
+                                    <a href="https://www.twitter.com/slash?post=91563" class="fab fa-twitter"></a>
+                                    <a href="https://www.linkedin.com/slash?post=15673" class="fab fa-linkedin-in"></a>
+                                    <a href="https://www.reddit.com/slash?post=92512" class="fab fa-reddit-alien"></a>
+                                </div>
+                                <div class="article-tags">
+                                    <a href="money">ads</a>
+                                    <a href="china">microsoft</a>
+                                    <a href="bitcoin">apps</a>
+                                    <a href="my/login" class="fas fa-tag"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <header>
+                            <h3>How a Whale Crashed Bitcoin To Sub-$7,000 Overnight
+                                <span class="highlight">(newsbtc.com)</span>
+                            </h3>
+                            <div class="article__info">
+                                <div class="article__confirmed"><a href="/codered" class="fas fa-flask"></a></div>
+                                <div class="info-content">
+                                    <span>Posted by BeauHD on Wednesday December 18, 2019 @02:00AM from the
+                                        behind-the-scenes dept.</span>
+                                    <span class="topic-icon">
+                                        <a href="bitcoin">
+                                            <img src="images/bitcoin_64.png" alt="bitcoin" width="40" height="40">
+                                        </a>
+                                    </span>
+                                    <span class="comment-bubble">
+                                        <a href="#">4</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="article__content">
+                            <div class="subhead">CaptainDork shares a report from NewsBTC:</div>
+                            <p class="alt">
+                                Bitcoin lost billions of dollars worth of valuation within a 30-minutes timeframe as
+                                a Chinese cryptocurrency scammer allegedly <a
+                                    href="https://www.newsbtc.com/2019/12/17/how-a-whale-crashed-bitcoin-to-sub-7000-overnight/">liquidated
+                                    its steal via over-the-counter markets</a>. The initial sell-off by PlusToken
+                                caused a domino effect, causing mass liquidations. PlusToken, a fraud scheme that
+                                duped investors of more than $2 billion, dumped huge bitcoin stockpiles from its
+                                anonymous accounts, according to Chainalysis. The New York-based blockchain
+                                consultancy cited an internal investigation that <a
+                                    href="https://blog.chainalysis.com/reports/plustoken-scam-bitcoin-price">showed
+                                    PlusToken scammers on a systematic crypto liquidation spree</a>. Some of them
+                                have been actively selling bitcoin since June -- right after the cryptocurrency
+                                established a year-to-date high of circa $14,000.
+                            </p>
+                            <p>According to Chainalysis, PlusToken had cashed out at least $185 million worth of bitcoin
+                                via OTC desks. "We can say that those cashouts increased volatility in Bitcoin's price
+                                and that they correlate significantly with Bitcoin price drops," says Chainalysis.
+                                <br><br>
+                                "Chainalysis's study shows that the entity still holds a massive stash of bitcoin that
+                                it might liquidate at a later stage," adds NewsBTC. "That raises the prospects of more
+                                price crashes unless there is an adequate demand to match the scammer's supply flow.</p>
+                            <br><br>
+                            <div class="article-footer">
+                                <div class="social-share">
+                                    <a href="https://www.facebook.com/slash?post=15367" class="fab fa-facebook-f"></a>
+                                    <a href="https://www.twitter.com/slash?post=91563" class="fab fa-twitter"></a>
+                                    <a href="https://www.linkedin.com/slash?post=15673" class="fab fa-linkedin-in"></a>
+                                    <a href="https://www.reddit.com/slash?post=92512" class="fab fa-reddit-alien"></a>
+                                </div>
+                                <div class="article-tags">
+                                    <a href="money">bitcoin</a>
+                                    <a href="china">money</a>
+                                    <a href="bitcoin">hackers</a>
+                                    <a href="my/login" class="fas fa-tag"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </main>
+            <aside class="main-aside">
+                <img src="images/ad-payoneer.jpg" alt="pyoneer payments" class="ad">
+                <img src="images/ad-domain.png" alt="cheap domains" class="ad">
+
+                <div class="poll">
+                    <h3 class="poll-title">
+                        Slashdot Poll
+                    </h3>
+
+                    <div class="poll-content">
+                        <div class="poll-question">
+                            Are you a fan of the new Tesla Cybertruck?
+                        </div>
+                        <form action="/sdpoll" method="POST">
+                            <div class="poll-options">
+                                <label class="poll-option"><input type="radio" name="poll-option-btn"
+                                        value="1">Yes</label>
+                                <label class="poll-option"><input type="radio" name="poll-option-btn"
+                                        value="2">No</label>
+                                <label class="poll-option"><input type="radio" name="poll-option-btn" value="3">Not sure
+                                    yet</label>
+                            </div>
+                            <button class="poll-vote-btn">vote now</button>
+                        </form>
+
+
+                        <div class="poll-details">
+                            <a href="poll-comments" class="highlight">Read the 114 comments</a>
+                            <span class="poll-votes">
+                                | 21016 votes
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

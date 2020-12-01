@@ -1,0 +1,548 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+    max-width:1350px;
+    margin: auto;
+}
+
+body{
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    background-color: #b8b8b8;
+    padding: 12px;
+}
+
+section{
+    margin-bottom: 8px;
+    background-color: #e6e6e6;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.highlight{
+    color: #00aca7;
+}
+
+.container-flex{
+    display: flex;
+}
+
+/* .icon-search {
+    background-image: url(../images/search-icon.png);
+    background-size: cover;
+} */
+
+/* =================================== Navbar =================== */
+.nav-main, .nav-second{
+    padding: 0 20px;
+}
+
+.nav-mobile{
+    display: none;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.nav-mobile .selected-tab{
+    color: snow;
+}
+
+.nav-mobile a{
+    color: #7b8289;
+}
+
+.navbar{
+    font-size: 0.875rem;
+    color: white;
+    background-color: inherit;
+}
+
+.nav-main{
+    height: 40px;
+    background-color: #005c5c;
+    border-top-left-radius: 10px;
+}
+
+    .nav-main a:hover{
+        background-color: #004d4d;
+    }
+
+    .logo{
+        background: url(../images/sdlogo.svg) no-repeat center;
+    }
+
+    .navbar-logo{
+        width: 158px;
+        height: 35px;
+        display: block;
+        background-size: 136px;
+        margin-left: -12px;
+        margin-right: 10px;
+        text-indent: -9999px;
+    }
+
+    .nav-main, .navbar__left,
+    .nav-main ul, .nav-second ul{
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar__left{
+        align-items: center;
+    }
+
+    .nav-main li a{
+        padding: 12px 18px;
+    }
+
+    .nav-label{
+        margin: 0 5px;
+    }
+
+    .nav-label i{
+        position: relative;
+        top: 1px;
+    }
+
+    .navbar__right{
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .submit-article{
+        cursor: pointer;
+        margin: 0 10px;
+        padding: 5px 15px;
+        background-color: #53A653;
+        border-radius: 3px;
+    }
+
+    .submit-article-mobile{
+        display: none;
+        background: url(../images/preload-sprites.png) no-repeat;
+        width: 23px;
+        height: 23px;
+        background-size: 256px 217px;
+        background-position: -78px -186px;
+        margin-right: 15px;
+    }
+
+    .navbar__right span{
+        margin: 0 10px;
+        margin-top: 1px;
+        color: #00aca7;
+    }
+
+    .navbar__right button{
+        background-color: transparent;
+        border: 0;
+        color: white;
+        cursor: pointer;
+    }
+
+
+#search-form{
+    margin: 0 20px;
+}
+
+    #search-form .form-group{
+        background-color: #003737;
+        border-radius: 6px;
+        border: 1px solid #007575;
+        position: relative;
+    }
+
+    #search-form input{
+        width: 155px;
+        background-color: transparent;
+        color: white;
+        padding: 7px 35px 7px 7px;
+        border: 0;
+    }
+
+    #search-form button{
+        position: absolute;
+        top: 4px;
+        right: 4px;
+    }
+
+
+.nav-second{
+    font-size: 12px;
+    height: 30px;
+    background-color: #004d4d;
+    display: flex;
+    align-items: center;
+}
+
+    .nav-second ul{
+        padding-left: 168px;
+    }
+
+    .nav-second a{
+        padding: 5px 8px;
+        border-radius: 5px;
+    }
+
+    .nav-second a:hover{
+        background-color: #b7590b;
+    }
+
+.social-media{
+    margin-left: auto;
+}
+
+    .social-media a{
+        margin: 0 2px;
+        padding: 3px;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .fa-rss {
+        background: #ff6600;
+        color: white;
+    }
+
+    .fa-facebook-f {
+        background: #3B5998;
+    }
+
+    .fa-linkedin-in{
+        background: #2366b5;
+    }
+
+    .fa-twitter{
+        background: #5ba7db;
+    }
+
+    .fa-envelope {
+        background: #ff5700;
+    }
+
+/* =============================================== Content ====================================== */
+
+.main-wrapper{
+    background-color: #f5f5f5;
+}
+
+.user-tip{
+    background-color: #cfcfcf;
+    padding: 3px 25px;
+    color: rgb(138, 134, 134);
+    position: relative;
+}
+
+    .user-tip .pointer{
+        background-color: #cfcfcf;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        top: -5px;
+        left: 70px;
+        position: absolute;
+        z-index: -1;
+    }
+
+/* ================================================================ Main ============================================================= */
+
+main{
+    padding: 15px;
+    width: 75%;
+}
+
+#announcements{
+    position: relative;
+    background-color: #e4e2d9;
+    border-left: 12px solid #083366;
+    color: #395088;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 15px 25px 10px 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+    #announcements .btn-close{
+        position: absolute;
+        right: 7px;
+        top: 0px;
+        background-color: transparent;
+        border: 0;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    #announcements .btn-close:hover{
+        font-weight: bold;
+    }
+
+article{
+    margin: 15px 0;
+    font-size: 13px;
+    position: relative;
+}
+
+    article h3{
+        background-color: #016765;
+        padding: 5px 25px;
+        margin: 0;
+        color: white;
+    }
+
+    .article__info{
+        font-size: 12px;
+        background-color: #dadada;
+        display: flex;
+        align-items: center;
+        height: 30px;
+    }
+
+    .article__info--mobile{
+        display: none;
+    }
+
+    .article__info--mobile a{
+        color: inherit;
+    }
+
+    .article__confirmed{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .fa-flask{
+        color: brown;
+    }
+
+    
+
+    article .info-content{
+        margin: 0 15px;
+        display: flex;
+    }
+
+    .topic-icon{
+        position: absolute;
+        right: 68px;
+        top: 12px;
+    }
+
+    /* #topic-12732{
+
+    } */
+
+    .comment-bubble{
+        position: absolute;
+        right: 10px;
+        top: 13px;
+        background-color: black;
+        padding: 9px 19px;
+        border-radius: 3px;
+    }
+
+    span.comment-bubble:after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 8px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 8px 0 0;
+        border-color: #1e2329 transparent transparent transparent;
+    }
+
+    .article__content{
+        padding: 20px 30px;
+    }
+
+    .article__content a{
+        text-decoration: underline;
+        color: rgb(0, 102, 102);
+    }
+
+    .alt{
+        padding: 10px 15px;
+        margin: 8px 0;
+        border-left: 3px solid rgba(0, 0, 0, 0.2);
+    }
+
+    article .subhead {
+        margin-bottom: 8px;
+    }
+
+    .article-footer {
+        display: flex;
+    }
+
+    .social-share a {
+        font-size: 15px;
+        color: #008181;
+        background-color: #e8e8e8;
+        text-decoration: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 5px;
+    }
+
+    .article-tags {
+        margin-left: auto;
+    }
+
+    .article-tags a {
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 3px;
+    }
+
+    .article-tags a:hover{
+        background-color: skyblue;
+    }
+
+
+/* ============================================================== Main Aside ===================================================== */
+
+.main-aside{
+    width: 25%;
+    padding: 0 10px;
+}
+
+.main-aside img{
+    width: 100%;
+}
+
+.poll-title{
+    background-color: #494949;
+    color: white;
+    border-top-right-radius: 10px;
+    padding: 5px 20px;
+    font-size: 15px;
+}
+
+.poll-content{
+    background-color: #dddddd;
+    border-bottom-left-radius: 10px;
+    padding: 20px 15px 15px 15px;
+}
+
+.poll-question{
+    color: gray;
+    margin: 10px 0;
+}
+
+.poll-option{
+    background-color: #e5e5e5;
+    font-size: 13px;
+    display: block;
+    margin: 8px 0;
+    padding: 5px 8px;
+    font-weight: 700;
+}
+
+.poll-option input{
+    margin-right: 7px;
+}
+
+.poll-vote-btn{
+    color: white;
+    background-color: orange;
+    border: 0;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+
+/* =============================================== Media Queries ======================================== */
+
+@media (max-width: 1024px){
+    html{
+        min-width: inherit;
+    }
+    body{
+        padding: 0;
+        background-color: #eeefed;
+    }
+    section{
+        margin-bottom: 0;
+    }
+    .nav-main{
+        background: linear-gradient(to bottom, #000000, #1e1e1e);
+        border-radius: 0;
+    }
+    .nav-second{
+        background-color: black;
+        padding: 0 10px;
+    }
+    .nav-mobile{
+        display: block;
+        padding: 0;
+    }
+    .nav-mobile a{
+        padding: 0 15px 0 0;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .submit-article-mobile{ display: block; }
+    .nav-main nav, .nav-second ul, 
+    .social-media, .user-tip,
+    .main-aside, #announcements,
+    .article__info, #search-form,
+    article .subhead{
+        display: none;
+    }
+    #login, #signup{
+        color: #7b8289;
+    }
+    .navbar-logo{
+        width: 105px;
+        height: 40px;
+        background-size: 100px;
+        text-indent: -9999px
+    }
+    main{
+        width: 100%;
+        padding: 0;
+    }
+    article{
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+    .article__info--mobile{
+        display: block;
+    }
+    article h3{
+        background-color: inherit;
+        color: #313f40;
+        margin-bottom: 5px;
+        padding: 0;
+    }
+    .article__content, .article__content .alt{
+        padding: 0;
+    }
+    .article__content .alt{
+        border: 0;
+    }
+}
